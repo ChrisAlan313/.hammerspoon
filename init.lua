@@ -50,6 +50,18 @@ hs.hotkey.bind(super, "Right", function()
   win:setFrame(f)
 end)
 
+-- Make window full screen
+hs.hotkey.bind(super, "Up", function()
+  local win = hs.window.focusedWindow()
+  win:maximize()
+end)
+
+-- Minimize window
+hs.hotkey.bind(super, "Down", function()
+  local win = hs.window.focusedWindow()
+  win:minimize()
+end)
+
 hs.hotkey.bind(super, "T", function()
   hs.application.launchOrFocus("Terminal")
 end)
